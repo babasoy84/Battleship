@@ -1428,21 +1428,13 @@ void init_c(char**& comp_s, int size) {
 		{
 			r = rand() % 4;
 			if (r == 0)
-			{
 				rotate = 'r';
-			}
 			else if (r == 1)
-			{
 				rotate = 'l';
-			}
 			else if (r == 2)
-			{
 				rotate = 'u';
-			}
 			else if (r == 3)
-			{
 				rotate = 'd';
-			}
 			do
 			{
 				do
@@ -1488,21 +1480,13 @@ void init_c(char**& comp_s, int size) {
 			count = 0;
 			r = rand() % 4;
 			if (r == 0)
-			{
 				rotate = 'r';
-			}
 			else if (r == 1)
-			{
 				rotate = 'l';
-			}
 			else if (r == 2)
-			{
 				rotate = 'u';
-			}
 			else if (r == 3)
-			{
 				rotate = 'd';
-			}
 			do
 			{
 				do
@@ -1544,21 +1528,13 @@ void init_c(char**& comp_s, int size) {
 			count = 0;
 			r = rand() % 4;
 			if (r == 0)
-			{
 				rotate = 'r';
-			}
 			else if (r == 1)
-			{
 				rotate = 'l';
-			}
 			else if (r == 2)
-			{
 				rotate = 'u';
-			}
 			else if (r == 3)
-			{
 				rotate = 'd';
-			}
 			do
 			{
 				do
@@ -1575,21 +1551,13 @@ void init_c(char**& comp_s, int size) {
 				}
 			} while (not check_s(comp_s, rotate, size, x, y, 2));
 			if (rotate == 'r' && b)
-			{
 				comp_s[x][y + 1] = ship;
-			}
 			else if (rotate == 'l' && b)
-			{
 				comp_s[x][y - 1] = ship;
-			}
 			else if (rotate == 'u' && b)
-			{
 				comp_s[x - 1][y] = ship;
-			}
 			else if (rotate == 'd' && b)
-			{
 				comp_s[x + 1][y] = ship;
-			}
 		}
 		for (int i = 0; i < 5 && b; i++)
 		{
@@ -1609,7 +1577,6 @@ void init_c(char**& comp_s, int size) {
 				}
 				comp_s[x][y] = ship;
 			} while (not check_s(comp_s, 'r', size, x, y, 1));
-
 		}
 
 	} while (not check(comp_s, size));
@@ -1619,48 +1586,32 @@ bool check_xy(char** s, int size, int x, int y) {
 	if (x > 0 && x < 9 && y > 0 && y < 9)
 	{
 		if (s[x + 1][y + 1] != char(251) && s[x + 1][y - 1] != char(251) && s[x - 1][y + 1] != char(251) && s[x - 1][y - 1] != char(251) && s[x][y + 1] != char(251) && s[x][y - 1] != char(251) && s[x - 1][y] != char(251) && s[x + 1][y] != char(251))
-		{
 			return true;
-		}
 		else
-		{
 			return false;
-		}
 	}
 	else if (x == 0)
 	{
 		if (y == 0)
 		{
 			if (s[x + 1][y + 1] != char(251) && s[x][y + 1] != char(251) && s[x + 1][y] != char(251))
-			{
 				return true;
-			}
 			else
-			{
 				return false;
-			}
 		}
 		else if (y > 0 && y < 9)
 		{
 			if (s[x + 1][y + 1] != char(251) && s[x + 1][y - 1] != char(251) && s[x][y + 1] != char(251) && s[x][y - 1] != char(251) && s[x + 1][y] != char(251))
-			{
 				return true;
-			}
 			else
-			{
 				return false;
-			}
 		}
 		else if (y == 9)
 		{
 			if (s[x + 1][y - 1] != char(251) && s[x][y - 1] != char(251) && s[x + 1][y] != char(251))
-			{
 				return true;
-			}
 			else
-			{
 				return false;
-			}
 		}
 	}
 	else if (x > 0 && x < 9)
@@ -1668,24 +1619,16 @@ bool check_xy(char** s, int size, int x, int y) {
 		if (y == 0)
 		{
 			if (s[x + 1][y + 1] != char(251) && s[x - 1][y + 1] != char(251) && s[x][y + 1] != char(251) && s[x - 1][y] != char(251) && s[x + 1][y] != char(251))
-			{
 				return true;
-			}
 			else
-			{
 				return false;
-			}
 		}
 		else if (y == 9)
 		{
 			if (s[x + 1][y - 1] != char(251) && s[x - 1][y - 1] != char(251) && s[x][y - 1] != char(251) && s[x - 1][y] != char(251) && s[x + 1][y] != char(251))
-			{
 				return true;
-			}
 			else
-			{
 				return false;
-			}
 		}
 	}
 	else if (x == 9)
@@ -1693,41 +1636,27 @@ bool check_xy(char** s, int size, int x, int y) {
 		if (y == 0)
 		{
 			if (s[x - 1][y + 1] != char(251) && s[x][y + 1] != char(251) && s[x - 1][y] != char(251))
-			{
 				return true;
-			}
 			else
-			{
 				return false;
-			}
 		}
 		else if (y > 0 && y < 9)
 		{
 			if (s[x - 1][y + 1] != char(251) && s[x - 1][y - 1] != char(251) && s[x][y + 1] != char(251) && s[x][y - 1] != char(251) && s[x - 1][y] != char(251))
-			{
 				return true;
-			}
 			else
-			{
 				return false;
-			}
 		}
 		else if (y == 9)
 		{
 			if (s[x - 1][y - 1] != char(251) && s[x][y - 1] != char(251) && s[x - 1][y] != char(251))
-			{
 				return true;
-			}
 			else
-			{
 				return false;
-			}
 		}
 	}
 	else
-	{
 		return false;
-	}
 }
 
 void main() {
@@ -1778,9 +1707,7 @@ void main() {
 			if (c == right)
 			{
 				if (y == 9)
-				{
 					y = -1;
-				}
 				if (square[x][y + 1] == ship)
 				{
 					int i = 0;
@@ -1798,70 +1725,50 @@ void main() {
 					} while (square[x][y] == ship && i < 10);
 				}
 				else
-				{
 					y++;
-				}
 			}
 			else if (c == left)
 			{
 				if (y == 0)
-				{
 					y = 10;
-				}
 				if (square[x][y - 1] == ship)
 				{
 					int i = 0;
 					do
 					{
 						if (y - 1 >= 0)
-						{
 							y--;
-						}
 						else
-						{
 							y = 9;
-						}
 						i++;
 					} while (square[x][y] == ship && i < 10);
 				}
 				else
-				{
 					y--;
-				}
 			}
 			else if (c == up)
 			{
 				if (x == 0)
-				{
 					x = 10;
-				}
 				if (square[x - 1][y] == ship)
 				{
 					int i = 0;
 					do
 					{
 						if (x - 1 >= 0)
-						{
 							x--;
-						}
 						else
-						{
 							x = 9;
-						}
 						i++;
 					} while (square[x][y] == ship && i < 10);
 				}
 				else
-				{
 					x--;
-				}
 			}
 			else if (c == down)
 			{
 				if (x == 9)
-				{
 					x = -1;
-				}
 				if (square[x + 1][y] == ship)
 				{
 					int i = 0;
@@ -1879,9 +1786,7 @@ void main() {
 					} while (square[x][y] == ship && i < 10);
 				}
 				else
-				{
 					x++;
-				}
 			}
 			square[x][y] = 254;
 		}
@@ -1916,9 +1821,7 @@ void main() {
 			if (c == right)
 			{
 				if (y == 9)
-				{
 					y = -1;
-				}
 				if (square_c[x][y + 1] == 'x' || square_c[x][y + 1] == char(251))
 				{
 					int i = 0;
@@ -1936,36 +1839,26 @@ void main() {
 					} while ((square_c[x][y] == 'x' || square_c[x][y] == char(251)) && i < 10);
 				}
 				else
-				{
 					y++;
-				}
 			}
 			else if (c == left)
 			{
 				if (y == 0)
-				{
 					y = 10;
-				}
 				if (square_c[x][y - 1] == 'x' || square_c[x][y - 1] == char(251))
 				{
 					int i = 0;
 					do
 					{
 						if (y - 1 >= 0)
-						{
 							y--;
-						}
 						else
-						{
 							y = 9;
-						}
 						i++;
 					} while ((square_c[x][y] == 'x' || square_c[x][y] == char(251)) && i < 10);
 				}
 				else
-				{
 					y--;
-				}
 			}
 			else if (c == up)
 			{
@@ -2058,7 +1951,8 @@ void main() {
 							square[c_x][c_y] = 'x';
 							break;
 						}
-					}				}
+					}
+				}
 			}
 		}
 	}

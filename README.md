@@ -1,4 +1,7 @@
 # Battleship
+
+![alt text](https://github.com/babasoy84/Battleship/blob/main/battleship_title.png?raw=true)
+
 A simple battleship game implemented in less than 2000 lines of C++.
 
 # Installation
